@@ -1,0 +1,25 @@
+[versions]
+groovyVersion = "3.0.5"
+springBootVersion = "2.6.7"
+junitVersion = "5.8.2"
+
+[libraries]
+# SPRING
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBootVersion" }
+spring-boot-gradle-plugin = { module = "org.springframework.boot:org.springframework.boot.gradle.plugin", version.ref = "springBootVersion" }
+
+# TESTING
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junitVersion" }
+junit-core = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitVersion" }
+
+# GROOVY
+groovy-core = { module = "org.codehaus.groovy:groovy", version.ref = "groovyVersion" }
+groovy-json = { module = "org.codehaus.groovy:groovy-json", version.ref = "groovyVersion" }
+groovy-nio = { module = "org.codehaus.groovy:groovy-nio", version.ref = "groovyVersion" }
+
+[plugins]
+gradle-plugins-commons = { id = "io.github.vrapalis.gradle.plugins.commons" }
+
+[bundles]
+# GROOVY
+groovy = ["groovy-core", "groovy-json", "groovy-nio"]

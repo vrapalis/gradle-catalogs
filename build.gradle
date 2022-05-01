@@ -1,0 +1,23 @@
+plugins {
+    id 'version-catalog'
+    id 'maven-publish'
+}
+
+group='io.github.vrapalis'
+version='0.0.1'
+
+catalog {
+    // declare the aliases, bundles and versions in this block
+    versionCatalog {
+        library('my-lib', 'org.codehaus.groovy:groovy:3.0.5')
+        from files('./gradle/libs.versions.toml')
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.versionCatalog
+        }
+    }
+}
