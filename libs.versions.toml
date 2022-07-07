@@ -3,17 +3,23 @@ groovyVersion = "3.0.5"
 springBootVersion = "2.6.7"
 junitVersion = "5.8.2"
 mapstructVersion = "1.4.2.Final"
+lombokVersion = "1.18.24"
 
 [libraries]
 # SPRING
 spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBootVersion" }
 spring-boot-gradle-plugin = { module = "org.springframework.boot:org.springframework.boot.gradle.plugin", version.ref = "springBootVersion" }
 spring-boot-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-boot-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-thymeleaf = { module = "org.springframework.boot:spring-boot-starter-thymeleaf" }
+spring-boot-security = { module = "org.springframework.boot:spring-boot-starter-security" }
+spring-boot-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
 spring-boot-test = { module = "org.springframework.boot:spring-boot-starter-test" }
 
 # DEVELOPER TOOLS
-lombok = { module = "org.projectlombok:lombok" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombokVersion" }
 mapstruct = { module = "org.mapstruct:mapstruct", version.ref = "mapstructVersion" }
+h2 = { module= "com.h2database:h2" }
 
 # TESTING
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junitVersion" }
